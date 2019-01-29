@@ -21,7 +21,6 @@ namespace ProviderApi.Tests.Pacts.Tests
         public ProviderApiTests(ITestOutputHelper output)
         {
             _outputHelper = output;
-            _providerUri = "http://localhost:5000";
             _pactServiceUri = "http://localhost:9001";
 
             _webHostPactService = WebHost.CreateDefaultBuilder()
@@ -41,7 +40,7 @@ namespace ProviderApi.Tests.Pacts.Tests
             //Assert Pacts
             IPactVerifier pactVerifier = new PactVerifier(config);
             pactVerifier.ProviderState($"{_pactServiceUri}/provider-states")
-                .ServiceProvider("Provider", _providerUri)
+                .ServiceProvider("Provider", _pactServiceUri)
                 .HonoursPactWith("Consumer")
                 .PactUri(@"..\..\..\..\..\..\pacts\consumer-provider.json")
                 .Verify();

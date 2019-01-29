@@ -26,7 +26,9 @@ namespace ProviderApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<IVehiculRepository, VehiculRepository>();
+
+            if (!services.Any(s => s.ServiceType.Name == typeof(IVehiculRepository).Name))
+                services.AddScoped<IVehiculRepository, VehiculRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
