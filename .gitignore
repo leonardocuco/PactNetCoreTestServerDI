@@ -1,0 +1,15 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/Consumer/src/ConsumerApp/obj
+/Consumer/src/ConsumerApp/bin/Debug/netcoreapp2.1
+/Consumer/tests/Consumer.Tests.Pact/bin/Debug/netcoreapp2.1/pact-win32/lib
+/Consumer/tests/Consumer.Tests.Pact/bin/Debug/netcoreapp2.1/pact-win32/bin
+/Consumer/tests/Consumer.Tests.Pact/obj
+/Consumer/tests/Consumer.Tests.Pact/bin/Debug/netcoreapp2.1
+/Provider/scr/ProviderApi/obj
+/Provider/scr/ProviderApi/bin/Debug/netcoreapp2.1
+/Provider/tests/ProviderApi.Tests.Pacts/obj
+/Provider/tests/ProviderApi.Tests.Pacts/bin/Debug/netcoreapp2.1
+/.vs

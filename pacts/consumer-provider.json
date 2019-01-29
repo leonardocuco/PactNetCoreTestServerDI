@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "A valid GET request for all vehiculs with no parameter",
+      "providerState": "FullVehiculState",
+      "request": {
+        "method": "get",
+        "path": "/api/Vehiculs"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "vehiculId": 1,
+            "label": "Simple Car"
+          },
+          {
+            "vehiculId": 2,
+            "label": "Powered Car"
+          },
+          {
+            "vehiculId": 3,
+            "label": "Three wheel Car"
+          }
+        ]
+      }
+    },
+    {
+      "description": "A valid GET request for specific vehicul with valid id parameter",
+      "providerState": "FullVehiculState",
+      "request": {
+        "method": "get",
+        "path": "/api/Vehiculs/2"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "vehiculId": 2,
+          "label": "Powered Car"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
